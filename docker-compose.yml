@@ -1,13 +1,8 @@
 version: '2'
 services:
-  api:
+  node-server:
+    container_name: node-server
+    restart: always
     build: .
     ports:
-      - "3002:3002"
-    depends_on:
-      - mongo
-  mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
-    
+      - "3040:3030"

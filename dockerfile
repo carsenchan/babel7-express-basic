@@ -1,13 +1,13 @@
 FROM node:latest
 
-RUN mkdir /api
-WORKDIR /api
+RUN mkdir /node-server
+WORKDIR /node-server
 
-COPY package.json /api
-RUN npm install
+COPY package.json /node-server
+RUN yarn install
 
-COPY . /api
+COPY . /node-server
 
-EXPOSE 3002
+EXPOSE 3030
 
-CMD [ "npm", "start"]
+CMD [ "yarn", "start"]
