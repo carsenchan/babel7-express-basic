@@ -1,2 +1,9 @@
 # Dependency directories
 node_modules/
+
+# ignore environment variables
+.env
+
+yarn-error.log
+package-lock.json
+yarn-lock.json
